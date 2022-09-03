@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+
+/* ########## GENERAL ########## */
+
+.contenedor-principal {
+    background-image: url("../assets/img/infantil2.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    min-height: calc(100vh - 70px - 70px);
+}
+
+
+/* ########## HEADER ########## */
+
+.header {
+    min-height: 70px;
+    background-color: #c9e165;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.header__logo {
+    display: flex;
+    cursor: pointer;
+}
+
+.header__logo img {
+    height: 75px;
+    transition: all 0.3s;
+    margin-left: 30px;
+}
+
+.header__logo img:hover {
+    transform: scale(1.2);
+}
+
+.header__nav-links {
+    text-decoration: none;
+    color: #008080;
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+.header__nav-links:hover {
+    transform: scale(1.1);
+    color: #FF5733;
+}
+
+.header__btn {
+    font-weight: 700;
+    color: white;
+    padding: 9px 25px;
+    background-color: #FF5733;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header__btn:hover {
+    background-color: #f0f3f4;
+    color: #008080;
+    transform: scale(1.1);
+}
+
+
+/* ########## SLIDER ##########*/
+
+.slide {
+    max-width: 60rem;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.active img {
+    border-radius: 10px;
+}
+
+.carousel-inner {
+    width: 50rem;
+    height: 22rem;
+}
+
+.w-100 {
+    height: 22rem;
+}
+
+
+/* ########## INFO ##########*/
+
+.info {
+    display: flex;
+    margin: auto;
+    max-width: 1000px;
+    height: 150px;
+}
+
+.info__img {
+    display: flex;
+    padding-top: 30px;
+    width: 270px;
+    height: 120px;
+    margin: 1px 30px;
+}
+
+
+/* ########## PAG. INICIO - SECCION NOVEDADES */
+
+.novedades {
+    margin: auto;
+    max-width: 1000px;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+}
+
+.novedades__title {
+    width: 60rem;
+    margin: auto;
+    background-color: #008080;
+    padding-left: 30px;
+    color: white;
+    border-radius: 10px;
+}
+
+.novedades__card {
+    width: 100%;
+    height: 25%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.novedades__card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.novedades__card img {
+    width: 100%;
+    height: 220px;
+}
+
+.card__content h3 {
+    padding: 10px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.card__content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card__content-text {
+    line-height: 1.5;
+    color: #6a6a6a;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.card__content a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+
+.card__content a:hover {
+    background: #2fb4cc;
+    color: white;
+}
+
+
+/* ########## FOOTER ########## */
+
+footer {
+    min-height: 70px;
+    background-color: #008080;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.main-footer {
+    padding-left: 20px;
+}
+
+.red-social i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 10px;
+}
+
+.red-social p {
+    padding-right: 20px;
+    font-style: italic;
+}
+
+
+/* ########## RESPONSIVE ######### */
+
+@media screen and (max-width: 768px) {
+    .contenedor-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas: "caja1 caja1" "caja2 caja4" "caja2 caja4" "caja3 caja5" "caja6 caja6" "caja7 caja7" "caja8 caja8";
+    }
+    footer .main {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:700px) {
+    .header {
+        flex-direction: column;
+    }
+    .header__nav {
+        padding: 10px 0;
+    }
+    .info {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .novedades {
+        display: flex;
+        flex-direction: column;
+    }
+    .novedades__title {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+}
+
+@media (max-width:700px) {
+    footer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:480px) {
+    .header {
+        flex-direction: column;
+    }
+    .header__nav {
+        display: flex;
+        padding: 10px 0;
+        justify-content: center;
+    }
+    .contenedor-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas: "caja1" "caja2" "caja3" "caja4" "caja5" "caja6" "caja7" "caja8";
+    }
+}
